@@ -1,0 +1,39 @@
+#root {
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #FCF8E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fruta {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #94B49F;
+    margin: 5px;
+    font-size: 40px;
+    cursor: pointer;
+    content-visibility: visible;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activar {
+    background: #DF7861;
+    content-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: .3s;
+}
