@@ -5,6 +5,7 @@
 
 * {
     transition: all 0.3s;
+    font-family: 'Varela Round', sans-serif;
 }
 
 body {
@@ -37,7 +38,7 @@ div {
 .tarjeta {
     position: relative;
     transform-style: preserve-3d;
-    animation: iniciar 5s;
+    animation: iniciar 3s;
 }
 
 .cara {
@@ -63,6 +64,36 @@ div {
     cursor: pointer;
     background: #DF7861;
     padding: 20px;
-    border-radius: 50px;
+    border-radius: 10px;
     font-size: 130%;
+}
+
+.nuevo-juego:hover {
+    background: #f3927c;
+}
+
+#puntos {
+    display: inline-block;
+    display: flex;
+    align-self: flex-end;
+    margin-right: 15px;
+    margin-top: -50px;
+    font-size: 150%;
+    margin-left: 30px;
+    padding: 10px;
+    border: 1px solid #DF7861;
+    border-radius: 5px;
+}
+
+@keyframes iniciar {
+
+    20%,
+    90% {
+        transform: rotateY(180deg);
+    }
+
+    0%,
+    100% {
+        transform: rotateY(0deg);
+    }
 }

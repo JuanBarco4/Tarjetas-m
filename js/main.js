@@ -1,20 +1,23 @@
+let puntos;
 let iconos = []
-        let selecciones = []
+let selecciones = []
 
         generarTablero()
 
         function cargarIconos() {
             iconos = [
-                '🍇','🍈','🍉','🍊','🍋','🍌','🍍','🥭','🍎'
+                '🍇','🍈','🍉','🍊','🍋','🍌','🍍','🥭','🍎','🥥','🍒','🍏'
             ]
         }
 
         function generarTablero() {
+            puntos = 0
+            document.getElementById("puntos").innerHTML = "Puntos: " + puntos
             cargarIconos()
             selecciones = []
             let tablero = document.getElementById("tablero")
             let tarjetas = []
-            for (let i = 0; i < 18; i++) {
+            for (let i = 0; i < 24; i++) {
                 tarjetas.push(`
                 <div class="area-tarjeta" onclick="seleccionarTarjeta(${i})">
                     <div class="tarjeta" id="tarjeta${i}">
@@ -61,6 +64,8 @@ let iconos = []
                 }else{
                     trasera1.style.background = "#95c799"
                     trasera2.style.background = "#95c799"
+                    puntos++;
+                    document.getElementById("puntos").innerHTML = "Puntos: " + puntos
                 }
             }, 1000);
         }
