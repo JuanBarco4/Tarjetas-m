@@ -64,6 +64,8 @@ let selecciones = []
                 }else{
                     trasera1.style.background = "#95c799"
                     trasera2.style.background = "#95c799"
+                    trasera1.classList.add("quitar")
+                    trasera2.classList.add("quitar")
                     puntos++;
                     document.getElementById("puntos").innerHTML = "Puntos: " + puntos
                 }
